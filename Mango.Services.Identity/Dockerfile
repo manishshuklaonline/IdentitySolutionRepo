@@ -19,4 +19,4 @@ RUN dotnet publish "Mango.Services.Identity.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "/app/publish/Mango.Services.Identity.dll"]
+ENTRYPOINT ["dotnet", "Mango.Services.Identity.dll"]
